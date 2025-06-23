@@ -60,39 +60,43 @@ export default function Home() {
   return (
     <ScrollView className="flex-1 bg-white px-4 pt-10 pb-20">
       {/* Header */}
-      <View className="flex-row justify-between items-center mb-4">
-        <View className='flex flex-row items-center'>
-          <Image
-          source={{ uri: 'https://png.pngtree.com/element_our/png/20181214/real-estate-house-logo-design-template-vector-illustration-png_269520.jpg' }}
-          className="w-10 h-16 rounded-full"
-          />
-          <Text className="text-2xl font-bold">EstateEase</Text>
-        </View>
-        
-        <TouchableOpacity onPress={() => router.push('/tabs/profile')}>
+      <View className="flex-row items-center justify-center mb-4">
         <Image
-          source={{
-            uri: image || 'https://i.pravatar.cc/150?img=12',
-          }}
-          className="w-12 h-12 rounded-full border border-gray-300"
+          source={{ uri: 'https://www.f6s.com/content-resource/media/5389243_d2331c7b2d781e932e70341289023d5c3b760951.jpg' }}
+          className="w-36 h-20 "
         />
-      </TouchableOpacity>
+        {/* <Text className="text-2xl font-bold ml-2">EstateEase</Text> */}
       </View>
 
+
       {/* Search Bar */}
-      <View className="bg-white rounded-full flex-row items-center px-6 py-4 mb-4 shadow">
-        <Ionicons name="search" size={20} color="gray" />
-        <TextInput
-            placeholder="Search address, city, zip..."
-            value={searchTerm}
-            onChangeText={setSearchTerm}
-            className="ml-2 flex-1 text-sm text-black"
-            placeholderTextColor="#999"
-        />
-        <Link href="/modals/filters">
-          <Ionicons name="filter" size={20} color="gray" />
-        </Link>
-      </View>
+      <View className="flex-row items-center justify-between px-4 py-3 mb-4">
+          {/* Search Box */}
+          <View className="flex-row items-center bg-white rounded-full px-4 py-3 flex-1 mr-3 shadow-sm">
+            <Ionicons name="search" size={20} color="gray" />
+            <TextInput
+              placeholder="Search address, city, zip..."
+              value={searchTerm}
+              onChangeText={setSearchTerm}
+              className="ml-2 flex-1 text-sm text-black"
+              placeholderTextColor="#999"
+            />
+            <Link href="/modals/filters">
+              <Ionicons name="filter" size={20} color="gray" />
+            </Link>
+          </View>
+
+          {/* Profile Avatar */}
+          <TouchableOpacity onPress={() => router.push('/tabs/profile')}>
+            <Image
+              source={{
+                uri: image || 'https://i.pravatar.cc/150?img=12',
+              }}
+              className="w-10 h-10 rounded-full border border-gray-200"
+            />
+          </TouchableOpacity>
+        </View>
+
 
       {/* Category Navbar */}
       <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mb-4 -mx-2 px-2">

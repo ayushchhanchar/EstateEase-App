@@ -9,6 +9,7 @@ export default function Profile() {
 
   return (
     <ScrollView className="flex-1 bg-white px-4 pt-10">
+      
       {/* Profile Header */}
       <View className="items-center mb-6">
         <Image

@@ -19,7 +19,7 @@ export default function PropertyDetails() {
   }
 
   return (
-    <ScrollView className="flex-1 bg-white">
+    <ScrollView className="flex-1  bg-white">
       {/* Property Image + Back Button */}
       <View className="relative">
         <Image source={{ uri: property.image }} className="w-full h-64" />
@@ -31,7 +31,7 @@ export default function PropertyDetails() {
         </TouchableOpacity>
       </View>
 
-      <View className="px-4 py-4">
+      <View className="px-4 py-4 -mt-6 rounded-t-3xl bg-white">
         {/* Title & Location */}
         <Text className="text-2xl font-bold mb-1">{property.title}</Text>
         <Text className="text-gray-600 text-sm mb-2">{property.location}</Text>

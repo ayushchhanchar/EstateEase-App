@@ -77,7 +77,7 @@ export default function Contact() {
             <Text className="text-lg font-semibold text-gray-800">${property.price}<Text className="text-sm text-gray-400"> /month</Text></Text>
           </View>
           <Text className="text-sm text-gray-500 mb-6">
-            {property.bathrooms} Baths • {property.bedrooms} Beds • {property.sqft || '1200'} sqft
+            {property.bathrooms} Baths • {property.bedrooms} Beds • {'1200'} sqft
           </Text>
 
           {/* Form Inputs */}
