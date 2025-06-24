@@ -1,50 +1,104 @@
-# Welcome to your Expo app 👋
+# 🏡 EstateEase – Real Estate Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**EstateEase** is a feature-rich, modern real estate listing mobile application built using **Expo**, **React Native**, **NativeWind**, and **Zustand** for state management. This app allows users to browse, filter, and explore property listings with a sleek user experience, as well as contact agents, manage favorites, and edit profile settings.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Demo
+ 
+[📥 Download APK (via EAS Build)](#)
+https://expo.dev/accounts/ayushchhanchar/projects/EstateEase2/builds/6e13f682-fdd1-4577-85ac-63e7f10b3efe
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🚀 Features
 
-   ```bash
-   npx expo start
-   ```
+- 🔍 **Property Search** – Search by location, city, or zip code.
+- 🏷️ **Filter by Type & Category** – Filter by rent/buy, category (apartment, villa, house, etc.), city, price range, and more.
+- 🛏️ **View Property Details** – Tap any property to see detailed specs, images, description, agent info, and facilities.
+- ❤️ **Favorites Management** – Like and unlike properties, which persist across the session.
+- 👤 **Profile Screen** – View and edit profile with image upload support.
+- 📨 **Contact Agent** – Contact property agents directly via a modern form.
+- 🌙 **Dark Mode (Optional)** – Toggleable UI theme for better accessibility (if enabled).
+- 💾 **Global State Management** – Clean and efficient global state via Zustand.
+- 🎨 **Tailwind-style Styling** – Rapid UI development using NativeWind.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📸 Screenshots
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Home | Property Details | Filters | Contact Agent | Profile |
+|------|------------------|---------|----------------|---------|
+| ![home](./assets/screens/home.png) | ![details](./assets/screens/details.png) | ![filters](./assets/screens/filters.png) | ![contact](./assets/screens/contact.png) | ![profile](./assets/screens/profile.png) |
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛠️ Tech Stack
+
+| Tool               | Purpose                              |
+|--------------------|--------------------------------------|
+| Expo (Router)      | Project bootstrapping & navigation   |
+| React Native       | Core mobile development              |
+| NativeWind         | Tailwind-style styling in RN         |
+| Zustand            | Global state management              |
+| Expo Image Picker  | Profile image selection              |
+| Ionicons           | Iconography                          |
+| EAS Build          | For APK deployment (Android)         |
+
+---
+
+## 📂 Project Structure
+
+├── app/
+│ ├── tabs/ # Tab screens (Home, Favorites, Messages, Profile)
+│ ├── modals/ # Modal routes (Details, Contact)
+│ ├── filters.tsx # Full filter screen
+├── components/ # Reusable UI components like PropertyCard
+├── constants/ # Dummy property data, constants
+├── store/ # Zustand state (filters, profile, favorites)
+├── assets/ # Images and fonts
+├── README.md
+
+yaml
+Copy
+Edit
+
+---
+
+## ⚙️ Installation & Running Locally
 
 ```bash
-npm run reset-project
-```
+# 1. Clone the repository
+git clone https://github.com/yourusername/estateease.git
+cd estateease
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+# 2. Install dependencies
+npm install
 
-## Learn more
+# 3. Start the Expo server
+npx expo start
+📦 Build APK (via EAS)
+To generate an Android APK:
 
-To learn more about developing your project with Expo, look at the following resources:
+bash
+Copy
+Edit
+npx eas build --platform android
+You can then distribute the APK to testers or upload it to the Play Store.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+🌐 Web Compatibility
+Basic web support is possible with:
 
-## Join the community
+bash
+Copy
+Edit
+npm install react-dom react-native-web
+npm run web
+Note: Web version may not fully replicate the mobile experience.
 
-Join our community of developers creating universal apps.
+✍️ Author
+Ayush Chhanchar
+Frontend & Mobile Developer
+📧 ayush@example.com
+🔗 LinkedIn | Portfolio
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
